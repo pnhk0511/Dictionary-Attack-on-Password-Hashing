@@ -62,14 +62,12 @@ def compare_files(my_file, dictionary_file):
 # Sample usage
 if __name__ == "__main__":
     # Target hash to crack (hash of 'password123' as an example)
-    target_password = "hiiii"
+    target_password = "hello"
     target_hash = md5_hash(target_password)
     print(f"Target Hash: {target_hash}")
 
     # Path to the rockyou.txt file
-    dictionary_file = (
-        "E:/study/sem 5/Cryptography/rockyou.txt"  # Update with your file path
-    )
+    dictionary_file = "E:/study/sem 5/Cryptography/Dictionary-Attack-on-Password-Hashing/rockyou.txt"  # Update with your file path
 
     # Run the dictionary attack
     found_password = dictionary_attack(target_hash, dictionary_file)
@@ -80,9 +78,7 @@ if __name__ == "__main__":
         print("No matching password found.")
 
     # Path to your password file
-    my_password_file = (
-        "E:/study/sem 5/Cryptography/pass.txt"  # Update with your file path
-    )
+    my_password_file = "E:/study/sem 5/Cryptography/Dictionary-Attack-on-Password-Hashing/pass.txt"  # Update with your file path
 
     # Compare passwords in your file with rockyou.txt
     compare_files(my_password_file, dictionary_file)
